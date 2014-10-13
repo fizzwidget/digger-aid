@@ -28,9 +28,15 @@ FDA_RaceForArchFragment = {
 	[401] = 7,	-- Tol'vir
 	[385] = 8,	-- Troll
 	[399] = 9,	-- Vrykul
+	
+	[754] = 10,	-- Mantid
 	[676] = 11,	-- Pandaren
 	[677] = 12,	-- Mogu
-	[754] = 13,	-- Mantid
+	
+	[829] = 13,	-- Arakkoa
+	[821] = 14,	-- Draenor Clans
+	[828] = 15,	-- Ogre
+	
 };
 FDA_FragmentForRace = {};
 setmetatable(FDA_FragmentForRace, {__index = function(tbl,key)
