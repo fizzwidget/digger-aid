@@ -32,6 +32,10 @@ CHAT COMMANDS:
 ------------------------------------------------------
 VERSION HISTORY
 
+v. 7.0 - 2016/08/18
+- Updated for WoW Patch 7.0 and Legion.
+- Supports the new Demonic, Highmountain Tauren, and Highborne archaeology branches.
+
 v. 6.0 - 2014/10/14
 - Updated for WoW Patch 6.0 and Warlords of Draenor.
 - Supports the new Arakkoa, Draenor Clans, and Ogre archaeology branches.
