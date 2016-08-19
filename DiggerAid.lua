@@ -19,25 +19,29 @@ FDA_COMMON_SKILLUP = 5;
 FDA_RARE_SKILLUP = 15;
 
 FDA_RaceForArchFragment = {
-	[384] = 1,	-- Dwarf
-	[398] = 2,	-- Draenei
-	[393] = 3,	-- Fossil
-	[394] = 4,	-- Night Elf
-	[400] = 5,	-- Nerubian
-	[397] = 6,	-- Orc
-	[401] = 7,	-- Tol'vir
-	[385] = 8,	-- Troll
-	[399] = 9,	-- Vrykul
+	[1174] = 1, -- Demonic
+	[1173] = 2, -- Highmountain Tauren
+	[1172] = 3, -- Highborne
+
+	[828] = 4,	-- Ogre
+	[821] = 5,	-- Draenor Clans
+	[829] = 6,	-- Arakkoa
 	
-	[754] = 10,	-- Mantid
-	[676] = 11,	-- Pandaren
-	[677] = 12,	-- Mogu
+	[677] = 7,	-- Mogu
+	[676] = 8,	-- Pandaren
+	[754] = 9,	-- Mantid
 	
-	[829] = 13,	-- Arakkoa
-	[821] = 14,	-- Draenor Clans
-	[828] = 15,	-- Ogre
-	
+	[399] = 10,	-- Vrykul
+	[385] = 11,	-- Troll
+	[401] = 12,	-- Tol'vir
+	[397] = 13,	-- Orc
+	[400] = 14,	-- Nerubian
+	[394] = 15,	-- Night Elf
+	[393] = 16,	-- Fossil
+	[398] = 17,	-- Draenei
+	[384] = 18,	-- Dwarf
 };
+
 FDA_FragmentForRace = {};
 setmetatable(FDA_FragmentForRace, {__index = function(tbl,key)
 	for currencyID, raceIndex in pairs(FDA_RaceForArchFragment) do
