@@ -19,27 +19,30 @@ FDA_COMMON_SKILLUP = 5;
 FDA_RARE_SKILLUP = 15;
 
 FDA_RaceForArchFragment = {
-	[1174] = 1, -- Demonic
-	[1173] = 2, -- Highmountain Tauren
-	[1172] = 3, -- Highborne
+	[1534] = 1, -- Zandalari
+	[1535] = 2, -- Drust
+	
+	[1174] = 3, -- Demonic
+	[1173] = 4, -- Highmountain Tauren
+	[1172] = 5, -- Highborne
 
-	[828] = 4,	-- Ogre
-	[821] = 5,	-- Draenor Clans
-	[829] = 6,	-- Arakkoa
+	[828] = 6,	-- Ogre
+	[821] = 7,	-- Draenor Clans
+	[829] = 8,	-- Arakkoa
 	
-	[677] = 7,	-- Mogu
-	[676] = 8,	-- Pandaren
-	[754] = 9,	-- Mantid
+	[677] = 9,	-- Mogu
+	[676] = 10,	-- Pandaren
+	[754] = 11,	-- Mantid
 	
-	[399] = 10,	-- Vrykul
-	[385] = 11,	-- Troll
-	[401] = 12,	-- Tol'vir
-	[397] = 13,	-- Orc
-	[400] = 14,	-- Nerubian
-	[394] = 15,	-- Night Elf
-	[393] = 16,	-- Fossil
-	[398] = 17,	-- Draenei
-	[384] = 18,	-- Dwarf
+	[399] = 12,	-- Vrykul
+	[385] = 13,	-- Troll
+	[401] = 14,	-- Tol'vir
+	[397] = 15,	-- Orc
+	[400] = 16,	-- Nerubian
+	[394] = 17,	-- Night Elf
+	[393] = 18,	-- Fossil
+	[398] = 19,	-- Draenei
+	[384] = 20,	-- Dwarf
 };
 
 FDA_FragmentForRace = {};
@@ -201,7 +204,7 @@ function FDA_OnEvent(self, event, ...)
 		return;
 	end
 	
-	if (event == "ARTIFACT_COMPLETE" or event == "ARTIFACT_UPDATE" or event == "CHAT_MSG_CURRENCY") then
+	if (event == "RESEARCH_ARTIFACT_COMPLETE" or event == "RESEARCH_ARTIFACT_UPDATE" or event == "CHAT_MSG_CURRENCY") then
 		RequestArtifactCompletionHistory();
 		if (FDA_NeedUpdateForRaceIndex) then
 			FDA_PrintArchUpdateForRaceIndex(FDA_NeedUpdateForRaceIndex);
@@ -210,7 +213,7 @@ function FDA_OnEvent(self, event, ...)
 	if (event == "CHAT_MSG_CURRENCY") then
 		FDA_PrintArchUpdateForCurrency(...);
 	end
-	if (event == "ARTIFACT_COMPLETE") then
+	if (event == "RESEARCH_ARTIFACT_COMPLETE") then
 		local completedArtifact = ...;
 		for raceIndex = 1, GetNumArchaeologyRaces() do
 			local artifactName, introText, rarity, icon, description, numSockets, art = GetActiveArtifactByRace(raceIndex);
@@ -428,10 +431,10 @@ end
 FDA_EventFrame = CreateFrame("Frame", nil, nil);
 FDA_EventFrame:SetScript("OnEvent", FDA_OnEvent);
 FDA_EventFrame:RegisterEvent("ADDON_LOADED");
-FDA_EventFrame:RegisterEvent("ARTIFACT_COMPLETE");
-FDA_EventFrame:RegisterEvent("ARTIFACT_UPDATE");
+FDA_EventFrame:RegisterEvent("RESEARCH_ARTIFACT_COMPLETE");
+FDA_EventFrame:RegisterEvent("RESEARCH_ARTIFACT_UPDATE");
 FDA_EventFrame:RegisterEvent("CHAT_MSG_CURRENCY");
-FDA_EventFrame:RegisterEvent("ARTIFACT_HISTORY_READY");
+FDA_EventFrame:RegisterEvent("RESEARCH_ARTIFACT_HISTORY_READY");
 
 GameTooltip:HookScript("OnTooltipSetItem", FDA_OnTooltipSetItem);
 ItemRefTooltip:HookScript("OnTooltipSetItem", FDA_OnTooltipSetItem);

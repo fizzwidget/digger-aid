@@ -32,6 +32,9 @@ CHAT COMMANDS:
 ------------------------------------------------------
 VERSION HISTORY
 
+v. 8.0 - 2016/08/03
+- Updated for WoW Patch 8.0 and Battle for Azeroth.
+
 v. 7.0 - 2016/08/18
 - Updated for WoW Patch 7.0 and Legion.
 - Supports the new Demonic, Highmountain Tauren, and Highborne archaeology branches.
