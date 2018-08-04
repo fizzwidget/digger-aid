@@ -32,8 +32,9 @@ CHAT COMMANDS:
 ------------------------------------------------------
 VERSION HISTORY
 
-v. 8.0 - 2016/08/03
+v. 8.0 - 2016/08/04
 - Updated for WoW Patch 8.0 and Battle for Azeroth.
+- Supports the new Drust and Zandalari archaeology branches.
 
 v. 7.0 - 2016/08/18
 - Updated for WoW Patch 7.0 and Legion.
